@@ -1,3 +1,6 @@
+const AWS = require("aws-sdk")
+const multipart = require('aws-lambda-multipart-parser');
+
 const s3 = new AWS.S3({
     region: process.env.AWS_REGION,
     endpoint: `s3.${process.env.BUCKET_REGION}.amazonaws.com`,
